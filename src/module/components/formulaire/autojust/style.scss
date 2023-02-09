@@ -1,0 +1,46 @@
+table {
+  width: 300px;
+  table-layout: fixed;
+  .tr {
+    // need to specify the length here otherwise, there is no height to inherit
+    height: 1px;
+  }
+  .td {
+    width: 50%;
+    text-align: center;
+    height: inherit;
+    .button {
+      // display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      padding: 10px;
+      border: 1px solid black;
+      background-color: lightgray;
+      width: 100%;
+      height: 100%;
+      .text {
+        color: blue;
+      }
+    }
+
+    .input {
+      padding: 2px;
+      width: 100%;
+    }
+  }
+}
+.same-height-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 10px;
+  border: 1px solid black;
+  background-color: lightgray;
+  width: 100%;
+  height: max-content;
+  .text {
+    color: blue;
+  }
+}

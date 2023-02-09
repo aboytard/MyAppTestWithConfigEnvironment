@@ -175,7 +175,7 @@ const configMain = (env) => {
         },
         hot: true,
         open: false,
-        port: 8919,
+        port: 9500,
         static: {
           directory: path.join(__dirname, "build"),
           serveIndex: true,
