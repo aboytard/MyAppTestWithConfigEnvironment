@@ -1,0 +1,94 @@
+[auto-just-modale].auto-just-modal {
+  //Taken from Neue Änderungen.css:
+
+  /* Modals - add class to div where class = modal-content*/
+  .modal-content {
+    background-color: #4e0000;
+    border-width: 2px;
+    border-style: solid;
+    border-color: #c8102e;
+    color: #ffffff;
+
+    & > .modal {
+      &-body,
+      &-footer,
+      &-header {
+        border-style: none;
+        padding: 10px;
+      }
+
+      &-header {
+        background-color: rgba(255, 255, 255, 0.15);
+      }
+
+      &-footer > .btn {
+        color: #fff;
+        background-color: #c8102e;
+        border-color: #c8102e;
+        margin-top: -4px;
+        height: 27px;
+        padding: 0 10px 0 10px;
+
+        &:hover {
+          color: #fff;
+          background-color: #3e5b6e;
+          border-color: #3e5b6e;
+        }
+
+        &:focus {
+          box-shadow: none;
+        }
+
+        &:active {
+          color: #c8102e;
+          background-color: #202020;
+          border-color: #c8102e;
+        }
+      }
+    }
+  }
+
+  .bg-info-modal {
+    background-color: #373d41;
+    border-color: #fff;
+    color: #fff;
+
+    & > .modal-footer > .btn.btn {
+      &-primary,
+      &-secondary {
+        &:hover {
+          color: #fff;
+          background-color: #3e5b6e;
+          border-color: #3e5b6e;
+        }
+
+        &:active {
+          color: #0099cc;
+          background-color: #202020;
+          border-color: #0099cc;
+        }
+      }
+
+      &-primary {
+        background-color: #0099cc;
+        border-color: #0099cc;
+
+        &.disabled,
+        &:disabled {
+          color: #fff;
+          background-color: #252d33 !important;
+          border-color: #505e6b !important;
+        }
+      }
+
+      &-secondary {
+        background-color: rgba(255, 255, 255, 0.15);
+        border-color: transparent;
+      }
+    }
+
+    .sk-circle:before {
+      background-color: #fff;
+    }
+  }
+}
