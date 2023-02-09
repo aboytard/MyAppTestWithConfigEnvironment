@@ -9,6 +9,7 @@ table {
     width: 50%;
     text-align: center;
     height: inherit;
+
     .button {
       // display: flex;
       align-items: center;
@@ -28,19 +29,5 @@ table {
       padding: 2px;
       width: 100%;
     }
-  }
-}
-.same-height-button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  padding: 10px;
-  border: 1px solid black;
-  background-color: lightgray;
-  width: 100%;
-  height: max-content;
-  .text {
-    color: blue;
   }
 }
