@@ -1,7 +1,7 @@
 export enum EPages {
   welcome = "welcome",
   summary = "summary",
-  calendar = "calendar",
+  autojust = "autojust",
 }
 
 export default EPages;

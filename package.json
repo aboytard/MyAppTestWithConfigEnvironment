@@ -16,6 +16,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^6.3.0",
+    "@fortawesome/free-solid-svg-icons": "^6.3.0",
     "cross-env-file": "^1.0.0",
     "react": "17.0.2",
     "react-dom": "^17.0.2"

@@ -1,14 +1,20 @@
 table {
   width: 300px;
   table-layout: fixed;
+  border-collapse: collapse;
+  padding: 10px;
+
   .tr {
     // need to specify the length here otherwise, there is no height to inherit
     height: 1px;
+    border-bottom: 1px solid;
+    border: 1px solid black;
   }
   .td {
     width: 50%;
     text-align: center;
     height: inherit;
+    border: 1px solid black;
 
     .button {
       // display: flex;
@@ -27,7 +33,7 @@ table {
 
     .input {
       padding: 2px;
-      width: 100%;
+      width: 90%;
     }
   }
 }

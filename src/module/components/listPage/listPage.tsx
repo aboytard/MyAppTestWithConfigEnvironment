@@ -1,21 +1,14 @@
-import React, { useState } from "react";
-// import EPages from "configurations/enums/page";
+import React from "react";
+import EPages from "@/core/enums/page";
 
-// CHECK WHY DOES THE IMPORT NOT WORK
-export enum EPages {
-  welcome = "welcome",
-  summary = "summary",
-  calendar = "calendar",
+export interface IListPage {
+  value: EPages;
+  setValue: React.Dispatch<React.SetStateAction<EPages>>;
 }
 
-export default function ListPage(): JSX.Element {
-  const [selectedValue, setSelectedValue] = useState();
-
-  const handleChange = (event) => {
-    setSelectedValue(EPages[event.target.value]);
-  };
+export default function ListPage({ value, setValue }: IListPage): JSX.Element {
   return (
-    <select onChange={handleChange}>
+    <select onChange={setValue} value={value}>
       {Object.keys(EPages).map((key) => (
         <option key={key} value={key}>
           {key}
