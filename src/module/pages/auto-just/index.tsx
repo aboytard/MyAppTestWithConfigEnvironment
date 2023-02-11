@@ -5,19 +5,17 @@ import AutojustIframe from "@/components/modal/autojust-iframe";
 import { useAutoJustContext } from "@/core/context/auto-just-formulaire-context-provider";
 
 export default function AutoJustPage(): JSX.Element {
+  const { isPageOpened, setIsPageOpened } = useAutoJustContext();
+  console.log("AutoJustPage isPageOpened", isPageOpened);
+
   const [isQuestionnaireOpen, setIsQuestionnaireOpen] =
     useState<boolean>(false);
 
-  const { isPageOpened } = useAutoJustContext();
-  useEffect(() => {
-    isPageOpened;
-  });
-
   const onSubmitModal = () => {
     setIsQuestionnaireOpen(!isQuestionnaireOpen); // on ferme
+    setIsPageOpened(false);
   };
 
-  console.log("AutoJustPage isPageOpened", isPageOpened);
   return isPageOpened ? (
     <div id="auto-just-page">
       <button onClick={() => setIsQuestionnaireOpen(!isQuestionnaireOpen)}>

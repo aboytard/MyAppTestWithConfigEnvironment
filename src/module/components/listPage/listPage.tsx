@@ -1,14 +1,24 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import EPages from "@/core/enums/page";
+import { useAutoJustContext } from "@/core/context/auto-just-formulaire-context-provider";
 
-export interface IListPage {
-  value: EPages;
-  setValue: React.Dispatch<React.SetStateAction<EPages>>;
-}
+export default function ListPage(): JSX.Element {
+  const [selectedValue, setSelectedValue] = useState<EPages>();
+  const { setIsPageOpened } = useAutoJustContext();
 
-export default function ListPage({ value, setValue }: IListPage): JSX.Element {
+  const chosePage = (event) => {
+    setSelectedValue(EPages[event.target.value]);
+  };
+
+  useEffect(() => {
+    if (selectedValue === EPages.autojust) {
+      setIsPageOpened(true);
+    } else {
+      setIsPageOpened(false);
+    }
+  }, [selectedValue]);
   return (
-    <select onChange={setValue} value={value}>
+    <select onChange={chosePage} value={selectedValue}>
       {Object.keys(EPages).map((key) => (
         <option key={key} value={key}>
           {key}

@@ -12,27 +12,13 @@ import AutoJustFormulaireContextProvider, {
 import EPages from "@/core/enums/page";
 
 export default function MyApp({ title }: CocoProps): JSX.Element {
-  const [selectedValue, setSelectedValue] = useState<EPages>();
-  const [aujustPage, setAutojustPage] = useState<boolean>(false);
-
-  // check how can I get those error taken away
-  const chosePage = (event) => {
-    setSelectedValue(EPages[event.target.value]);
-  };
-
-  useEffect(() => {
-    if (selectedValue === EPages.autojust) {
-      setAutojustPage(true);
-    } else {
-      setAutojustPage(false);
-    }
-  }, [selectedValue]);
+  const [autojustPage, setAutojustPage] = useState<boolean>();
 
   return (
     <div className="header-custom">
       <div className="header-component">{title}</div>
-      <ListPage value={selectedValue} setValue={chosePage} />
-      <AutoJustFormulaireContextProvider isAutoJustPageOpened={aujustPage}>
+      <AutoJustFormulaireContextProvider isAutoJustPageOpened={autojustPage}>
+        <ListPage />
         <AutoJustPage />
       </AutoJustFormulaireContextProvider>
     </div>
